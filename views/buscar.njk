@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+{% include './includes/head.njk' %}
+    
+</head>
+<body>
+    
+<header>
+
+    {% include './includes/header.njk' %}
+
+</header>
+
+<body>
+<div class='post'>
+    <div>Titulo: {{post.Title}}</div>
+    <div> del Año: {{post.Year}}</div>
+    <div>{{post.msg}}</div>
+    <a href="/" class="brand-logo">Volver</a>
+</div>
+</body>
+
+
+<footer>
+
+    {% include './includes/footer.njk' %}
+
+</footer>
+
+
+</body>
+</html>

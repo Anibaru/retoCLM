@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+{% include './includes/head.njk' %}
+    
+</head>
+<body>
+    
+<header>
+
+    {% include './includes/header.njk' %}
+
+</header>
+
+<body>
+<div class='post'>
+<form action="/buscar?_method=GET" method="POST">
+
+  <p>Titulo:<input type="text" id="t" name="t"></p><br><br>
+  <p>Año (Opcional): <input type="number" name="y" id="y" min="1900"></p>
+  
+  <p>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+  </p>
+</form>
+</div>
+</body>
+
+
+<footer>
+
+    {% include './includes/footer.njk' %}
+
+</footer>
+
+
+</body>
+</html>

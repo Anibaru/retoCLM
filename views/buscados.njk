@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+{% include './includes/head.njk' %}
+    
+</head>
+<body>
+    
+<header>
+
+    {% include './includes/header.njk' %}
+
+</header>
+
+<body>
+
+<div class='post'>
+    <p>Cambia Palabras</p>
+<form action="/buscados" method="POST">
+  <p><label for="pelicula">Pelicula:</label>
+  <input type="text" id="pelicula" name="pelicula"></p><br><br>
+   <p><label for="palabra">Palabra:</label>
+  <input type="text" id="palabra" name="palabra"></p><br><br>
+  <p> <label for="cambiar">Reemplazar por:</label>
+  <input type="text" id="cambiar" name="cambiar"></p><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Borrar">
+</form>
+</div>
+<br><br>
+{% for post in posts %}
+
+<div class='post'>
+    <div>Titulo: {{post.Title}}</div>
+    <div>Año: {{post.Year}}</div>
+    <div>Lanzada: {{post.Released}}</div>
+    <div>Genero: {{post.Genre}}</div>
+    <div>Director: {{post.Director}}</div>
+    <div>Reparto: {{post.Actors}}</div>
+    <div>Trama: {{post.Plot}}</div>
+    {% for rating in post.Ratings %}
+    <div>{{rating.Source}} = {{rating.Value}} </div>
+    {% endfor %}
+</div>
+<br><br>
+
+{% endfor %}
+
+</body>
+
+<footer>
+
+    {% include './includes/footer.njk' %}
+
+</footer>
+
+
+</body>
+</html>
