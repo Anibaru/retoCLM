@@ -9,3 +9,4 @@ Recuerden que deben de ejecutar ``npm install`` para reconstruir los modulos de 
 - validaciones con Joi
 - Mas Comentarios
 - manejo de logs, supongo q usar algun middleware de 3ros
+- uso de docker
